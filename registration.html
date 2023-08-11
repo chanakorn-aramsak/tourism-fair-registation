@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Fair Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Tourism Fair Registration</h2>
+        <form action="submit_form.php" method="post">
+            <label for="companyName">Name of Company:</label>
+            <input type="text" id="companyName" name="companyName" required>
+            
+            <label for="bootSize">Size of Booth:</label>
+            <select id="bootSize" name="bootSize">
+                <option value="10x10">10x10</option>
+                <option value="10x15">10x15</option>
+            </select>
+            
+            <label for="requireTable">Require Table:</label>
+            <input type="checkbox" id="requireTable" name="requireTable">
+            
+            <label for="numChairs">Number of Chairs:</label>
+            <input type="number" id="numChairs" name="numChairs" min="0">
+            
+            <label for="contactName">Name of Contact:</label>
+            <input type="text" id="contactName" name="contactName" required>
+            
+            <label for="contactTel">Tel. of Contact:</label>
+            <input type="tel" id="contactTel" name="contactTel" required>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
