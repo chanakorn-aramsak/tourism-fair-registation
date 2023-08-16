@@ -1,0 +1,26 @@
+{
+  "name": "tourism-fair-registation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanakorn-aramsak/tourism-fair-registation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chanakorn-aramsak/tourism-fair-registation/issues"
+  },
+  "homepage": "https://github.com/chanakorn-aramsak/tourism-fair-registation#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "csv-writer": "^1.6.0",
+    "express": "^4.18.2"
+  }
+}

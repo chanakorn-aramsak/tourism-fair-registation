@@ -1,6 +1,6 @@
 body {
   /* Add background image */
-  background-image: url("./background.png");
+  background-image: url("../public/background.png");
   /* Set background image to cover the entire page */
   /* Center the background image */
   background-attachment: fixed;
