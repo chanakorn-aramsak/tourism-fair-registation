@@ -31,12 +31,20 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 80%; /* this makes sure that the content doesn't stretch to the full width */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: this will give a translucent white background to enhance readability of the text on the image */
+  padding: 20px; /* Optional: this adds a bit of spacing inside the div */
+  border-radius: 15px; /* Optional: this rounds the corners of the div */
 }
 
-.white_bg 
-{
-    background-color: #ffffff;
-    padding: 3px; /*add this if you want a bit of space around the text*/
+.white_bg {
+  background-color: #ffffff;
+  padding: 3px; /*add this if you want a bit of space around the text*/
 }
 /* Style the <hr> element */
 hr {
@@ -46,12 +54,34 @@ hr {
 
 h1 {
   font-weight: bold;
-  background-image: ;
+  color: rgb(252, 95, 84);
   font-size: 72px;
 }
 
 h2 {
+  color: rgb(84, 123, 252);
   font-weight: bold;
-  color: #fff;
   font-size: 32px;
+}
+
+.btn-box {
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f5f5f5; /* Light gray background */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  margin-top: 20px; /* Spacing from other elements */
+  max-height: 300px; /* adjust as needed */
+  width: auto;
+}
+.image-gallery img {
+  max-height: 300px; /* adjust as needed */
+  width: auto;
+  margin: 10px; /* add some margin around images */
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }

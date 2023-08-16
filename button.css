@@ -1,86 +1,33 @@
-.btn {
-  position: relative;
-
-  display: block;
-  margin: 30px auto;
-  padding: 0;
-
-  overflow: hidden;
-
-  border-width: 0;
-  outline: none;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-
-  background-color: #2ecc71;
-  color: #ecf0f1;
-
-  transition: background-color 0.3s;
+.btn-box {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px 0;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: #27ae60;
+.btn-container {
+  margin-top: 20px;
 }
 
-.btn > * {
-  position: relative;
+.btn.register-btn {
+  background-color: #8dfcb7; /* Blue Color */
+  color: #0e0202;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-family: 'Itim';
+  border: none;
+  border-radius: 50px; /* Makes button rounded */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn span {
-  display: block;
-  padding: 12px 24px;
+.btn.register-btn:hover {
+  background-color: #2980b9; /* Darker Blue on Hover */
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
 }
 
-.btn:before {
-  content: "";
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  display: block;
-  width: 0;
-  padding-top: 0;
-
-  border-radius: 100%;
-
-  background-color: rgba(236, 240, 241, 0.3);
-
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.btn.register-btn:active {
+  transform: scale(1); /* Returns button to normal size on click */
 }
-
-.btn:active:before {
-  width: 120%;
-  padding-top: 120%;
-
-  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
-}
-
-/* Styles, not important */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-html {
-  position: relative;
-  height: 100%;
-}
-
-
-h2 {
-  font-weight: normal;
-}
-
-.btn.blue {
-  background-color: #0360eb;
-  font-family: "Itim", "Courier New", Courier, monospace;
-  font-size: 20px;
-}
-
