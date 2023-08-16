@@ -1,0 +1,57 @@
+body {
+  /* Add background image */
+  background-image: url("./background.png");
+  /* Set background image to cover the entire page */
+  /* Center the background image */
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  /* Ensure good contrast for text on the background */
+  /* color: white; */
+  /* Prevent background from scrolling with the page */
+  font-family: "Itim", "Courier New", Courier, monospace;
+}
+/* Position text in the top-left corner */
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+/* Position text in the middle */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.white_bg 
+{
+    background-color: #ffffff;
+    padding: 3px; /*add this if you want a bit of space around the text*/
+}
+/* Style the <hr> element */
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+h1 {
+  font-weight: bold;
+  background-image: ;
+  font-size: 72px;
+}
+
+h2 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 32px;
+}
