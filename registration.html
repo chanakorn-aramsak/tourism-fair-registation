@@ -1,71 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
+
 <head>
     <meta charset="UTF-8">
+    <link
+      href="https://fonts.googleapis.com/css?family=Itim"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourism Fair Registration</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>ลงทะเบียนเช่าพื้นที่</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
+
     <div class="container">
-        <h2>Tourism Fair Registration</h2>
-        <form action="submit_form.php" method="post">
-            <label for="companyName">Name of Company:</label>
-            <input type="text" id="companyName" name="companyName" required>
-            
-            <label for="bootSize">Size of Booth:</label>
-            <select id="bootSize" name="bootSize">
-                <option value="10x10">10x10</option>
-                <option value="10x15">10x15</option>
-            </select>
-            
-            <label for="requireTable">Require Table:</label>
-            <input type="checkbox" id="requireTable" name="requireTable">
-            
-            <label for="numChairs">Number of Chairs:</label>
-            <input type="number" id="numChairs" name="numChairs" min="0">
-            
-            <label for="contactName">Name of Contact:</label>
-            <input type="text" id="contactName" name="contactName" required>
-            
-            <label for="contactTel">Tel. of Contact:</label>
-            <input type="tel" id="contactTel" name="contactTel" required>
-            
-            <button type="submit">Register</button>
+        <form action="your_server_endpoint" method="POST">
+
+            <h4 class="center-align">ลงทะเบียนเช่าพื้นที่แสดงสินค้า</h4>
+
+            <div class="input-field">
+                <input type="text" id="companyName" name="companyName" required>
+                <label for="companyName">ชื่อบริษัท:</label>
+            </div>
+
+            <div class="input-field">
+                <select id="boothSize" name="boothSize">
+                    <option value="10x10">10x10 ฟุต</option>
+                    <option value="10x15">10x15 ฟุต</option>
+                </select>
+                <label for="boothSize">ขนาดบูธ:</label>
+            </div>
+
+            <p>
+                <label>
+                    <input type="checkbox" id="table" name="table" />
+                    <span>ต้องการโต๊ะตั้งในบูธ</span>
+                </label>
+            </p>
+
+            <div class="input-field">
+                <input type="number" id="numberOfChairs" name="numberOfChairs" min="0" required>
+                <label for="numberOfChairs">จำนวนเก้าอี้:</label>
+            </div>
+
+            <div class="input-field">
+                <input type="text" id="contactName" name="contactName" required>
+                <label for="contactName">ชื่อผู้ติดต่อ:</label>
+            </div>
+
+            <div class="input-field">
+                <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required>
+                <label for="contactNumber">เบอร์ผู้ติดต่อ:</label>
+            </div>
+
+            <div class="input-field center-align">
+                <button class="btn waves-effect waves-light" type="submit">ส่งข้อมูล</button>
+            </div>
+
         </form>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+
 </body>
+
 </html>
