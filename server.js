@@ -19,7 +19,11 @@ const csvWriter = createCsvWriter({
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 app.use(express.static('src'));
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/src/index.html');
+});
 app.get('/registration.html', (req, res) => {
     res.sendFile(__dirname + '/src/registration.html');
 });
